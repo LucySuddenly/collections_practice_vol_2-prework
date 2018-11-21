@@ -34,16 +34,28 @@ def count_elements(hash)
   hash.each do |element|
     element[:count] = 0
     name = element[:name]
+<<<<<<< HEAD
     hash.each do |elements|
       if elements[:name] == name
         element[:count] += 1
       end
     end 
   end.uniq
+=======
+    #binding.pry
+    hash.each do |element|
+      binding.pry
+      if hash[key] == name
+        element[:count] += 1
+      end
+    end 
+  end
+>>>>>>> d616b3ebfd2b0c7df0933c2652ac1be03e8275da
 end 
 
 def merge_data(keys, data)
   array = []
+<<<<<<< HEAD
   keys.each do |first_name|
     name = first_name[:first_name]
     data.each do |person_info, values|
@@ -53,6 +65,16 @@ def merge_data(keys, data)
          array << new_person
       end 
     end 
+=======
+  data.each do |data_element|
+    data_element.each do |name, info|
+      keys.each do |keys_element|
+        keys_element.each do |first_name, actual|
+          
+        end
+      end
+    end
+>>>>>>> d616b3ebfd2b0c7df0933c2652ac1be03e8275da
   end
   array
 end
